@@ -36,11 +36,11 @@ class ImageEditor
     @ratio = (width.to_f / height.to_f).round(2)
   end
 
-  def set_height(height)
+  def reset_height(height)
     @height = height
   end
 
-  def set_width(width)
+  def reset_width(width)
     @width = width
   end
 
@@ -49,6 +49,19 @@ class ImageEditor
     h = (@img.height - @height)/2
     format = w.to_i.to_s + 'x' + h.to_i.to_s
     @img.shave format
+  end
+
+  # auto maintain original ratio
+  def resize_img
+    w = @width.to_s
+    h = @height.to_s
+    format = w + 'x' + h
+    @img.resize format
+  end
+
+  # for JPEG range form 0 to 100, default 75
+  def reset_quality(n)
+    @img.quality n
   end
 
   def save(name)
