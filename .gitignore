@@ -2,7 +2,8 @@
 *.DS_Store
 
 # ignore image files
-image/
+images/
+test_images/
 
 # ignore environment files
 .idea/
