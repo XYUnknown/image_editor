@@ -1,9 +1,9 @@
 require_relative 'image_editor'
-IMG = "image/"
+IMG = "images/"
 EXT = ".jpg"
 SUCCESS_MSG = "Done!"
 def run
-  puts("Please enter your image name (please ensure it is under path image/):")
+  puts("Please enter your image name (please ensure it is under path images/):")
   img = IMG + gets.strip! + EXT
   begin
     test_open_img(img)
