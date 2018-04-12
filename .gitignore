@@ -6,3 +6,6 @@ image/
 
 # ignore environment files
 .idea/
+
+# ignore Gemfile.lock
+Gemfile.lock
